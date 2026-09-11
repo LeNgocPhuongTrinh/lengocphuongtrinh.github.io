@@ -23,6 +23,14 @@ test('project-specific galleries load and preserve image proportions', async ({ 
   await page.emulateMedia({ reducedMotion: 'reduce' });
   for (const [id, count] of [['think-with-ai', 4], ['oee-manufacturing', 5], ['fitness-health', 1], ['mrp', 1]] as const) {
     await page.goto(`/projects/${id}/`);
+    if (id !== 'think-with-ai') {
+      const github = page.getByRole('link', { name: 'View GitHub repository' });
+      await expect(github).toHaveAttribute('target', '_blank');
+      await expect(github).toHaveAttribute('href', id === 'mrp'
+        ? 'https://github.com/LeNgocPhuongTrinh/python/tree/d80c5a6387380d7ec6ffe036a684d9f324bd0680/Supply%20Planning'
+        : `https://github.com/LeNgocPhuongTrinh/dashboard-visualization/tree/7a2c1d8808f39043f4e89bb051f2d37d8f507f27/${id === 'fitness-health' ? 'Fitness%20Tracker%20in%20Indian%20market' : 'OEE%20Manufacturing'}`);
+      await expect(github.locator('..').getByRole('link', { name: 'View original project' })).toHaveCount(1);
+    }
     const previews = page.getByLabel('Project image previews').locator('img');
     await expect(previews).toHaveCount(count);
     for (const preview of await previews.all()) {

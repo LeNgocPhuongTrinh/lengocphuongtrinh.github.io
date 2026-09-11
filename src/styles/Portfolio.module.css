@@ -83,6 +83,8 @@
 .careerDetail strong { font-weight: var(--weight-medium); }
 .careerDetail p { color: var(--muted); }
 .careerFoot { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; margin-top: var(--s4); min-height: 112px; }
+.careerStage { display: grid; grid-template-rows: auto 1fr auto; }
+.careerImage { width: 100%; height: 160px; object-fit: contain; align-self: center; }
 .careerMark { background: var(--surface); display: grid; place-items: center; font: var(--weight-bold) clamp(2rem, 4vw, 4rem)/1 var(--display); font-optical-sizing: none; font-variation-settings: "opsz" var(--display-optical-size); letter-spacing: -.08em; }
 .careerFoot p { border-left: var(--border); margin-left: var(--s4); padding-left: var(--s4); font-size: var(--text-xs); letter-spacing: .05em; text-transform: uppercase; line-height: 1.8; color: var(--muted); }
 .stats { border-top: var(--chapter-border); margin-top: var(--s5); padding-block: var(--s5) var(--s6); }
@@ -207,6 +209,8 @@
 .educationCard { border-left: var(--border); padding-left: var(--s5); }
 .educationMark { height: 135px; background: var(--surface); font: var(--weight-bold) var(--text-number)/1 var(--display); font-optical-sizing: none; font-variation-settings: "opsz" var(--display-optical-size); display: flex; align-items: center; justify-content: space-around; margin-block: var(--s4); }
 .educationMark > span { color: var(--red); font: 400 var(--text-lead)/1 var(--sans); }
+.educationImage { display: block; width: 100%; height: 150px; object-fit: cover; margin-block: var(--s4); }
+.recognitionImage { object-fit: contain; background: white; }
 .educationCard h3, .scholarship h3 { font: var(--weight-bold) var(--text-subhead)/1.1 var(--display); font-optical-sizing: none; font-variation-settings: "opsz" var(--display-optical-size); letter-spacing: -.035em; }
 .educationCard > p:not(.meta) { color: var(--muted); font-size: var(--text-sm); margin-top: var(--s4); }
 .scholarship { background: var(--red); color: var(--paper); padding: var(--s5); }
@@ -250,6 +254,8 @@
 .caseSection .body { max-width: 65ch; }
 .caseSection .projectPreview { margin-top: var(--s6); }
 .caseSection .button { margin-top: var(--s5); }
+.caseActions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s4); margin-top: var(--s5); }
+.caseActions .button { margin-top: 0; }
 .caseSection .meta { margin-block: var(--s4); }
 .editorialImage { width: 100%; height: 100%; max-height: 440px; object-fit: contain; object-position: bottom; }
 .careerTeaching { margin-top: var(--s2); font-size: var(--text-sm); line-height: 1.5; }

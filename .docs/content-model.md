@@ -45,3 +45,5 @@ The source folder `.docs/_local/` remains untracked. Fonts and their OFL license
 ## September refinements
 
 `project-previews.ts` maps project IDs to captions and their own source images. `images.ts` records the optimized new assets. Employment priority is Shopee, Unilever, CoderSchool, CJ Foods, Avery Dennison, ITL. Four supplied logos are used; Avery Dennison and ITL retain text identities until logos are supplied. See `2026-09-11-portfolio-refinements.md` for exact asset mapping and image provenance decisions.
+
+Journey and Education image mappings are defined in career.ts and education.ts using images.ts. The three user-supplied commit-pinned GitHub destinations are stored as githubHref in projects.ts and shown in The Build. See image-maintenance.md for asset replacement instructions.

@@ -45,6 +45,26 @@ export const images = {
     "width": 1280,
     "height": 720
   },
+  "journey-ftu": {
+    "src": "/images/journey-ftu.webp",
+    "width": 550,
+    "height": 412
+  },
+  "journey-shopee-unilever": {
+    "src": "/images/journey-shopee-unilever.webp",
+    "width": 1400,
+    "height": 788
+  },
+  "education-vietnam": {
+    "src": "/images/education-vietnam.webp",
+    "width": 700,
+    "height": 509
+  },
+  "education-sage-recognition": {
+    "src": "/images/education-sage-recognition.webp",
+    "width": 792,
+    "height": 256
+  },
   "shopee-logo": {
     "src": "/images/shopee-logo.webp",
     "width": 400,

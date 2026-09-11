@@ -16,7 +16,7 @@ export function About() {
       <div className={s.careerGrid}>{career.map((stage, index) => <article className={s.careerStage} key={stage.phase} data-reveal>
         <div className={s.careerHeader}><span className={s.largeNumber}>{String(index + 1).padStart(2, '0')}</span><div><p className={s.redMeta}>{stage.phase}</p><h3>{stage.title}</h3></div></div>
         <div className={s.careerDetail}><strong>{stage.institution}</strong><p>{stage.detail}</p>{stage.teaching && <p className={s.careerTeaching}>{stage.teaching}</p>}</div>
-        <div className={s.careerFoot}><span className={s.careerMark} aria-hidden="true">{stage.mark}</span><p>{stage.perspective}</p></div>
+        <div className={s.careerFoot}><img className={s.careerImage} {...stage.image} alt={stage.imageAlt} loading="lazy" /><p>{stage.perspective}</p></div>
       </article>)}</div>
     </div>
     <div className={s.stats}>

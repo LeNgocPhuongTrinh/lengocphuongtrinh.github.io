@@ -1,7 +1,7 @@
 export interface CaseStudyContent { why: string; approach: string; build: string; reflection: string }
 export interface Project {
   id: string; title: string; category: string; description: string;
-  mark: string; href?: string; image?: string; stack?: string[]; caseStudy?: CaseStudyContent;
+  mark: string; href?: string; githubHref?: string; image?: string; stack?: string[]; caseStudy?: CaseStudyContent;
 }
 export const featuredProject: Project = {
   id: 'think-with-ai', title: 'Think With AI', category: 'AI × Learning', mark: 'AI',
@@ -16,19 +16,19 @@ export const featuredProject: Project = {
   },
 };
 export const projects: Project[] = [
-  { id: 'oee-manufacturing', title: 'OEE Manufacturing', category: 'Power BI × Manufacturing', mark: 'OEE', image: '/images/oee-manufacturing.webp', description: 'Availability, performance, and quality: tracing production losses from the plant overview to individual machines.', href: '/projects/evidence/oee-manufacturing.pdf', stack: ['Power BI', 'Data visualization'], caseStudy: {
+  { id: 'oee-manufacturing', githubHref: 'https://github.com/LeNgocPhuongTrinh/dashboard-visualization/tree/7a2c1d8808f39043f4e89bb051f2d37d8f507f27/OEE%20Manufacturing', title: 'OEE Manufacturing', category: 'Power BI × Manufacturing', mark: 'OEE', image: '/images/oee-manufacturing.webp', description: 'Availability, performance, and quality: tracing production losses from the plant overview to individual machines.', href: '/projects/evidence/oee-manufacturing.pdf', stack: ['Power BI', 'Data visualization'], caseStudy: {
     why: 'An overall production figure does not explain where effective run time is lost. This dashboard separates availability, performance, and quality to make those losses visible.',
     approach: 'Connect a plant-level OEE and TEEP overview to separate availability, performance, and quality views. Compare daily trends and machine-level indicators, including stoppages and capacity utilization.',
     build: 'A five-page Power BI report covering production efficiency, downtime, performance losses, quality losses, and machine-level details. The supplied report is available below as a static PDF.',
     reflection: 'The report presents multiple paths into the production data rather than a single aggregate score. Its displayed values describe the report dataset; they are not claims of efficiency improvements delivered by this project.',
   } },
-  { id: 'fitness-health', title: 'Fitness & Health', category: 'Fitness tracker market analysis', mark: 'MOVE', image: '/images/fitness-tracker.webp', description: 'A visual study of fitness trackers in the Indian market: preferences, price segments, brands, and product features.', href: '/projects/evidence/fitness-tracker.pdf', stack: ['Data visualization', 'Market analysis'], caseStudy: {
+  { id: 'fitness-health', githubHref: 'https://github.com/LeNgocPhuongTrinh/dashboard-visualization/tree/7a2c1d8808f39043f4e89bb051f2d37d8f507f27/Fitness%20Tracker%20in%20Indian%20market', title: 'Fitness & Health', category: 'Fitness tracker market analysis', mark: 'MOVE', image: '/images/fitness-tracker.webp', description: 'A visual study of fitness trackers in the Indian market: preferences, price segments, brands, and product features.', href: '/projects/evidence/fitness-tracker.pdf', stack: ['Data visualization', 'Market analysis'], caseStudy: {
     why: 'Fitness tracker products vary in price, brand, and features. The analysis brings those dimensions together to examine the Indian market.',
     approach: 'Compare user preferences, brand price segments, ratings, and product features. Use distributions and feature-level comparisons to explore price variation.',
     build: 'A visual report spanning preference profiles, brand and price segmentation, feature correlation, and price comparisons. The complete supplied report is available as a PDF.',
     reflection: 'The report explicitly identifies a data limitation: only 31% of the data is valid for its feature/price correlation analysis. Those comparisons should be read within that constraint, rather than treated as a complete market model.',
   } },
-  { id: 'mrp', title: 'MRP — Material Requirement Planning', category: 'Python × Supply chain automation', mark: 'MRP', image: '/images/mrp.webp', description: 'Calculate planned order releases while accounting for shelf life, minimum order quantities, and raw materials stored at multiple sites.', href: 'https://lengocphuongtrinh.wixsite.com/lnpt/mrp', stack: ['Python', 'Supply chain'], caseStudy: {
+  { id: 'mrp', githubHref: 'https://github.com/LeNgocPhuongTrinh/python/tree/d80c5a6387380d7ec6ffe036a684d9f324bd0680/Supply%20Planning', title: 'MRP — Material Requirement Planning', category: 'Python × Supply chain automation', mark: 'MRP', image: '/images/mrp.webp', description: 'Calculate planned order releases while accounting for shelf life, minimum order quantities, and raw materials stored at multiple sites.', href: 'https://lengocphuongtrinh.wixsite.com/lnpt/mrp', stack: ['Python', 'Supply chain'], caseStudy: {
     why: 'Material planning has to account for practical constraints: shelf life, minimum order quantities, and materials held across multiple sites.',
     approach: 'Use Python to calculate planned order releases with these constraints included in the planning logic.',
     build: 'A Python application in supply chain automation. The original project page describes the material requirement planning work and remains the source for the detailed project evidence.',

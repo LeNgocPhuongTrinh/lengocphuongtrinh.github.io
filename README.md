@@ -22,6 +22,7 @@ On Windows with PowerShell script execution disabled, use `npm.cmd`.
 | `npm run build` | Production bundle, static HTML pages, sitemap and 404 |
 | `npm run preview` | Serve the production output |
 | `npm test` | Desktop, tablet and mobile browser checks; requires Edge |
+| `npm run images:prepare` | Regenerate mapped WebP images and `src/data/images.ts` from local originals |
 
 Tests expect the development server at `http://127.0.0.1:5173`. Override the test base URL in `playwright.config.ts` when checking a production preview.
 
@@ -41,6 +42,8 @@ React, TypeScript, Vite, CSS Modules, self-hosted fonts, GSAP and ScrollTrigger.
 ## Documentation
 
 Read the [codebase guide](.docs/codebase-guide.md) before modifying the project.
+
+To replace a photo or logo, follow the [image maintenance guide](.docs/image-maintenance.md). It explains the local source mapping, Sharp conversion, generated files and publication steps.
 
 [Design system](.docs/design-system.md) · [Motion system](.docs/motion-system.md) · [Content model](.docs/content-model.md) · [Deployment](.docs/deployment.md) · [Engineering rules](.docs/clean-coding-rules.md) · [Decisions](.docs/adr/)
 
