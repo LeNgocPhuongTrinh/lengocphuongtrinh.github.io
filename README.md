@@ -41,6 +41,8 @@ React, TypeScript, Vite, CSS Modules, self-hosted fonts, GSAP and ScrollTrigger.
 
 ## Documentation
 
+Documentation in `.docs/` is local-only and excluded from Git. The links below work in a local checkout that has these files; a fresh clone does not include them.
+
 Read the [codebase guide](.docs/codebase-guide.md) before modifying the project.
 
 To replace a photo or logo, follow the [image maintenance guide](.docs/image-maintenance.md). It explains the local source mapping, Sharp conversion, generated files and publication steps.
