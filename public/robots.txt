@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lengocphuongtrinh.github.io/sitemap.xml

@@ -1,0 +1,27 @@
+@import './tokens.css';
+@font-face { font-family: 'Bodoni Moda'; src: url('/fonts/bodoni-latin.woff2') format('woff2'); font-style: normal; font-weight: 400 900; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-latin.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Barlow Condensed'; src: url('/fonts/barlow-latin.woff2') format('woff2'); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Caveat'; src: url('/fonts/caveat-latin.woff2') format('woff2'); font-style: normal; font-weight: 400 700; font-display: swap; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + var(--s4)); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: var(--text-body); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body, #root { min-width: 320px; }
+::selection { background: var(--red); color: var(--paper); }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; cursor: pointer; }
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+button:disabled { cursor: default; }
+img, video { display: block; max-width: 100%; height: auto; }
+figure, p, h1, h2, h3, h4 { margin: 0; }
+h1, h2, h3, h4 { font-weight: var(--weight-display); }
+ul { padding-left: var(--s5); }
+button { border: 0; background: none; }
+main { overflow: clip; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
