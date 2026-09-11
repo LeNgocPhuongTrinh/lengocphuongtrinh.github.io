@@ -12,3 +12,6 @@
 - Original private sources and QA output are excluded from Git and the public deployment.
 
 Deployment status and live-URL verification are recorded in the final delivery message and GitHub Actions history.
+# Refinement validation — 2026-09-11
+
+The final production output passed the existing 13 browser checks (two desktop-only motion checks are skipped on tablet/mobile) and six new refinement checks across desktop, tablet and mobile. New checks cover four unique portraits, no grayscale, outbound link behavior, exact employer priority, optical-size application, gallery loading and constrained image proportions. The mobile navigation assertion was corrected to inspect the closed menu's DOM link; the navigation itself remained functional. TypeScript, production pre-rendering and `git diff --check` passed. Screenshots were visually reviewed, including desktop typography/Experience, tablet/mobile layout and OEE previews. See `2026-09-11-portfolio-refinements.md` for the changes and remaining data gaps.

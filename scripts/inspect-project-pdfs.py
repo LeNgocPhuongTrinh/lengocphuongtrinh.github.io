@@ -4,7 +4,7 @@ sys.path.insert(0, str(Path('.qa/python').resolve()))
 import pymupdf as fitz
 from pypdf import PdfReader
 
-root = Path('.docs/_local/UI Projects')
+root = Path('.docs/_local/3. UI Projects')
 for path in root.rglob('*.pdf'):
     slug = path.parent.name.lower().replace('analysis - ', '').replace(' - runner-up', '').replace(' ', '-')
     reader = PdfReader(path)
@@ -13,6 +13,6 @@ for path in root.rglob('*.pdf'):
     print(text[:6500].encode('ascii', 'replace').decode('ascii'))
     Path(f'.qa/{slug}.txt').write_text(text, encoding='utf-8')
     document = fitz.open(path)
-    for index in range(min(3, len(document))):
+    for index in range(len(document)):
         page = document[index]
         page.get_pixmap(matrix=fitz.Matrix(1.5, 1.5)).save(f'.qa/{slug}-{index}.png')

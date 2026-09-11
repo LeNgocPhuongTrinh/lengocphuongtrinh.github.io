@@ -9,7 +9,7 @@ Facts live in `src/data/`, separate from presentation. The user’s original bri
 | Name, identity, introduction, email | `profile.ts` | Keep Trinh Le and Lê Ngọc Phương Trinh connected |
 | Social destinations | `links.ts` | Real public links only |
 | Career progression | `career.ts` | Business → Analytics/BI → AI; CoderSchool is parallel contribution |
-| Statistics | `stats.ts` | Supplied 6+ years, 5 companies, 3 industries only |
+| Statistics | `stats.ts` | Supplied 6+ years, 5 companies, 3 industries; user-confirmed 2 countries and infinity curiosity |
 | Capabilities | `capabilities.ts` | User-supplied skills; no percentages or implied proficiency ranking |
 | Exploration | `exploration.ts` | Directions of curiosity, not new achievements |
 | Projects and case studies | `projects.ts` | Four narrative fields; optional real image, stack and link |
@@ -20,15 +20,15 @@ Facts live in `src/data/`, separate from presentation. The user’s original bri
 ## Verified source register
 
 - Existing repository `index.html` at `de46c3bbfb02c40b43305b21821b3a972123f036`: identity, contact links, degree, broad analytics background, Think With AI, Python work, MRP constraints, visualization portfolio.
-- User’s `.docs/_local/UI Generation/prompt_original.txt` and `.docs/_local/UX Generation/02_implementation_prompt.txt`: approved copy, capabilities, employers, 6+ experience, 5 employers, 3 industries, CoderSchool instruction/mentoring, Shopee AI workshop, named workplace projects, education and scholarship.
+- User’s `.docs/_local/1. UI Generation/prompt_original.txt` and `.docs/_local/UX Generation/02_implementation_prompt.txt`: approved copy, capabilities, employers, 6+ experience, 5 employers, 3 industries, CoderSchool instruction/mentoring, Shopee AI workshop, named workplace projects, education and scholarship.
 - [Public GitHub profile README](https://github.com/LeNgocPhuongTrinh/LeNgocPhuongTrinh/blob/main/README.md), read 2026-09-11: employer list, industry scope, current MSc, scholarship, contact and analytics skills.
 - Local sibling `think-with-ai` source, especially `src/components/landing/Features.tsx`, `HeroVideo.tsx`, and `.docs/codebase-guide.md`: topic-based adaptive practice, structured grading, misconceptions, material upload, progress, device-local state, provider key requirements, and incomplete Study view. The public product link is https://think-with-ai.vercel.app/.
-- Supplied `UI Projects/Think-With-AI.png`: real landing screenshot. The actual video/poster source comes from the product implementation, not from generated portfolio frames.
+- Supplied `3. UI Projects/Think-With-AI/`: real landing screenshot. The actual video/poster source comes from the product implementation, not from generated portfolio frames.
 - Supplied OEE Manufacturing PDF: five-page Power BI dashboard with availability, performance, quality, TEEP, downtime, and machine detail. Dataset values are never recast as achieved improvements.
 - Supplied Fitness Tracker PDF: Indian market preferences, features, brands, price and correlation analysis; its stated 31% valid-data limitation is included in the case study. The folder name says Runner-up, but no award claim is published without further evidence.
 - Supplied MRP image: Python inventory and production constraint code with a planning table. Existing MRP project page confirms shelf life, MOQ, and multi-site planned order release scope.
 - Supplied Supplier Quality PDF, Film analysis image, and Parental Leave Policy PDF: original visual evidence supporting the corresponding project summaries. Analytical findings describe source datasets, not business outcomes delivered.
-- Supplied portrait files: `IMG_3974.JPG` for hero; `A_83.jpg` for profile sections; `IMG_3993.JPG` for contact. No generated portrait has been substituted.
+- Supplied portrait files: transparent PNGs in `2. Portrait - Remove BG`: IMG_3974 for Hero, A_83 for About, 292A1104 for Portfolio, IMG_3993 for Contact. The user-supplied supporting illustrations are editorial artwork, not project evidence.
 
 ## Adding a project
 
@@ -36,8 +36,12 @@ Add a typed record to `projects.ts`. Supply a stable URL-safe `id`, title, categ
 
 ## Uncertainties deliberately omitted
 
-Exact employment dates, unsupported titles for CJ Foods/Avery Dennison/ITL, generated job descriptions, 20+ projects, country counts, invented success metrics, fictional university photographs, and fake dashboards are not published. Workplace projects without public evidence receive a short overview with no invented live link. LinkedIn and Pinterest references could not be retrieved through the available web reader; they were not used as verification.
+Exact employment dates, generated job descriptions, 20+ projects, invented success metrics, fictional university photographs, and fake dashboards are not published. All six role titles and their display priority were confirmed directly by the user on 2026-09-11. Workplace projects without public evidence receive a short overview with no invented live link. LinkedIn and Pinterest references could not be retrieved through the available web reader; they were not used as verification.
 
 ## Presentation assets
 
 The source folder `.docs/_local/` remains untracked. Fonts and their OFL licenses, optimized real images, public evidence documents, favicon and social portrait are committed. Normal cloning/building needs none of the private source assets. The social preview uses a crop of the real portrait, not fabricated professional evidence.
+
+## September refinements
+
+`project-previews.ts` maps project IDs to captions and their own source images. `images.ts` records the optimized new assets. Employment priority is Shopee, Unilever, CoderSchool, CJ Foods, Avery Dennison, ITL. Four supplied logos are used; Avery Dennison and ITL retain text identities until logos are supplied. See `2026-09-11-portfolio-refinements.md` for exact asset mapping and image provenance decisions.

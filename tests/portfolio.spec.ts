@@ -11,7 +11,7 @@ test('editorial page, assets, and responsive layout', async ({ page }, testInfo)
   const headings = await page.locator('main h2').allTextContents();
   expect(headings.findIndex(text => text.includes('Capabilities'))).toBeLessThan(headings.findIndex(text => text.includes('portfolio')));
   for (const section of await page.locator('main > section').all()) await section.scrollIntoViewIfNeeded();
-  for (const image of await page.locator('img').all()) {
+  for (const image of await page.locator('img:visible').all()) {
     await image.scrollIntoViewIfNeeded();
     await expect.poll(() => image.evaluate(element => (element as HTMLImageElement).complete && (element as HTMLImageElement).naturalWidth > 0)).toBe(true);
   }

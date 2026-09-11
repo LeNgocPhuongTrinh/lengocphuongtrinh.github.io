@@ -1,3 +1,4 @@
+import { images } from '../data/images';
 import { Accordion } from '../components/Accordion';
 import { SectionLabel } from '../components/SectionLabel';
 import { capabilities } from '../data/capabilities';
@@ -8,7 +9,7 @@ export function Capabilities() {
     <SectionLabel aside="More than tools. A way of thinking.">Capabilities / 02</SectionLabel>
     <div className={s.capabilitiesGrid}><div className={s.capabilitiesIntro}>
       <h2 id="capabilities-title" className={s.display} data-reveal>Capabilities<em>.</em></h2>
-      <div className={s.capabilityArt}><div><p className={s.meta}>Technical<br />know-how<br />meets<br />business<br />perspective.</p><span className={s.redDash} /><p className={s.meta}>Different tools.<br />Same purpose.</p></div><div className={s.typographicArt}><span className={s.meta}>A working philosophy</span><p>Understand<br />the problem.<br /><em>Build what<br />matters.</em></p><span className={s.handwriting}>Ideas → Data<br />People → Impact</span></div></div>
+      <div className={s.capabilityArt}><div><p className={s.meta}>Technical<br />know-how<br />meets<br />business<br />perspective.</p><span className={s.redDash} /><p className={s.meta}>Different tools.<br />Same purpose.</p></div><img className={s.editorialImage} {...images['capabilities-editorial']} alt="Ideas, data, and programming at work" loading="lazy" /></div>
     </div><Accordion items={items} label="Capabilities" /></div>
   </section>;
 }

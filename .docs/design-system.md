@@ -22,7 +22,7 @@ All recurring values are in `src/styles/tokens.css`.
 | Condensed identity | Barlow Condensed, Arial Narrow, sans-serif |
 | Annotations | Caveat, cursive |
 
-Display weight 900; large numbers 700; body 400; UI 500; condensed identity 600. Fonts are self-hosted with `font-display: swap`; only the display font is preloaded. Vietnamese identity can use font fallback for glyphs outside a subset.
+Display weight 900; large numbers 700; Bodoni optical size fixed at 12 with automatic optical sizing disabled after each font shorthand, preserving fine strokes without adding weight or text stroke; plus signs use Inter and infinity uses Georgia; body 400; UI 500; condensed identity 600. Fonts are self-hosted with `font-display: swap`; only the display font is preloaded. Vietnamese identity can use font fallback for glyphs outside a subset.
 
 ## Type scale
 
@@ -42,8 +42,6 @@ Section labels use uppercase 11px metadata, a flexible neutral hairline, and opt
 
 ## Images
 
-Real supplied portraits are optimized to 640px/1200px WebP. The hero uses the real source photograph layered between large identity words and supporting copy. A CSS/SVG silhouette crop is a presentation mask, not a generated person. Other portraits use grayscale editorial frames with red structural panels. Project evidence is supplied screenshots or rendered supplied PDFs, never reconstructed dashboards. Image width/height and aspect ratios reserve layout space. Only the hero is eager/high priority; other imagery is lazy-loaded. Video loads on request.
+Four supplied transparent PNG portraits are optimized as original-color WebP (640px and 1024px). Each appears once: Hero, About, Portfolio, Contact. There is no artificial silhouette or grayscale filter. About layers the supplied Stirling Castle photograph behind the portrait; Exploring uses the Stirling campus image instead of repeating a portrait. Capabilities, Experience and Growth use the supplied editorial artwork. All website images live in `public/images/`; new asset dimensions and names are centralized in `src/data/images.ts` and their source mapping in `scripts/prepare-refinement-images.mjs`.
 
-## Responsive transformations
-
-Breakpoints are owned by the responsive blocks in `Portfolio.module.css`: tablet ≤1050px and mobile ≤700px. Desktop navigation is 80px tall, mobile 64px. Tablet suppresses side annotations, compresses capability layouts, changes education to two columns, and reshapes growth/contact. Mobile exposes a menu disclosure, recomposes the hero as identity/photo then supporting copy, stacks the career and featured work, keeps exploring in two touch-friendly columns, makes scholarship full width, and simplifies growth to vertical content. Hero portrait height is 120vw on mobile and its LE lettering sits below the face. Mobile section headings use per-composition viewport scales documented directly beside those rules.
+Project evidence is supplied screenshots or rendered supplied PDFs. Case studies use stacked, captioned previews with contained images capped at 500px high (400px on phones). Other public projects expose native expandable galleries. Each preview links to its full-resolution image in a separate tab. Only the hero is eager/high priority; other imagery is lazy-loaded. Video loads on request.

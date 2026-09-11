@@ -41,7 +41,7 @@ vite.config.ts  playwright.config.ts
 
 ## Important responsibilities
 
-`App.tsx` selects the homepage, a known project, or the 404 page. It is the sole owner of page sequence. `main.tsx` hydrates static HTML, falling back to client rendering in development. `Navigation` owns mobile disclosure, active-section observation, and the thin progress line. `Accordion` owns one open row, ARIA relationships, and inert closed panels. `ProjectPreview` downloads video only after the visitor requests it. `Portrait` renders responsive decorative photographs; the meaningful hero photo has descriptive alternative text. `Footer` closes the identity loop.
+`App.tsx` selects the homepage, a known project, or the 404 page. It is the sole owner of page sequence. `main.tsx` hydrates static HTML, falling back to client rendering in development. `Navigation` owns mobile disclosure, active-section observation, and the thin progress line. `Accordion` owns one open row, ARIA relationships, and inert closed panels. `ProjectPreview` downloads video only after the visitor requests it. `Portrait` renders one of three distinct transparent, original-color portraits and optional architecture. Hero owns the fourth portrait. `DestinationLink` opens external URLs, mailto links and source documents in separate tabs while preserving internal navigation. `ProjectGallery` renders project-specific evidence from `project-previews.ts`. New image dimensions are centralized in `images.ts`. `Footer` closes the identity loop.
 
 `About` composes the career progression and supported statistics. `Capabilities` and `Experience` adapt data to the shared accordion. `Exploring` owns the selected conceptual direction. Other sections compose data without hidden application logic.
 
@@ -74,7 +74,7 @@ Real static directories: `/`, `/projects/think-with-ai/`, `/projects/mrp/`, `/pr
 
 ## Known limitations and open decisions
 
-Exact employment dates and some job titles are not available in the verified sources. Several workplace projects only have an overview. The portrait composition uses supplied photographs, whose clothing, pose and background differ from the generated design concept. Decorative education/capability imagery is replaced with intentional typography because corresponding real photographs were not supplied. The original private source folder is not needed for a normal build. Safari compatibility is addressed with semantic HTML, progressive animation, and standard CSS; only actual executed browser tests should be reported as tested.
+Exact employment dates are not available; all role titles and priority were confirmed by the user on 2026-09-11. Several workplace projects only have an overview. The portrait composition uses supplied photographs, whose clothing, pose and background differ from the generated design concept. Capabilities, Experience and Growth now use supplied editorial images. Education retains the existing typographic treatment. The original private source folder is not needed for a normal build. Safari compatibility is addressed with semantic HTML, progressive animation, and standard CSS; only actual executed browser tests should be reported as tested.
 
 ## Quick lookup
 
@@ -96,3 +96,5 @@ Exact employment dates and some job titles are not available in the verified sou
 | Publishing / rollback | `.github/workflows/deploy.yml`, `.docs/deployment.md` |
 
 Update this guide whenever architecture or an important responsibility changes.
+
+New supporting assets: run `node scripts/prepare-refinement-images.mjs` with the local source folder available. Normal builds use committed optimized images and do not depend on local source files. See the September refinement changelog for source-to-output mappings.
