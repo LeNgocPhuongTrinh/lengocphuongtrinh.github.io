@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   min-width: 0;
-  gap: var(--s5);
+  gap: var(--s3);
   padding: var(--countries-item-padding);
   border-top: var(--border);
   border-left: var(--border);
@@ -129,17 +129,25 @@
   object-fit: cover;
   border: var(--border);
 }
-.countryIdentity { min-width: 0; border-left: var(--border); padding-left: var(--s5); }
+.countryIdentity { min-width: 0; border-left: var(--border); padding-left: var(--s3); }
+.countryMain { display: flex; align-items: center; gap: inherit; min-width: 0; }
+.countryGroup { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(16rem, 1fr) minmax(0, 2fr); gap: var(--gap); }
+.countryGroup .countryFlag { width: var(--countries-group-flag-width); height: var(--countries-group-flag-height); }
+.countryRegions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 5.5rem), 1fr)); gap: var(--s5); list-style: none; padding: 0; margin: 0; }
+.countryRegion { min-width: 0; }
+.countryRegionFlag { width: var(--countries-region-flag-width); height: var(--countries-region-flag-height); object-fit: contain; border: var(--border); }
+.countryRegionName { margin-top: var(--s2); font-size: var(--text-xs); letter-spacing: .08em; text-transform: uppercase; overflow-wrap: anywhere; }
+.countryRegionWordmark { display: flex; flex-direction: column; justify-content: center; min-height: var(--countries-region-flag-height); width: max-content; max-width: 100%; font: var(--weight-bold) .875rem/1.4 var(--display); font-optical-sizing: none; font-variation-settings: "opsz" var(--display-optical-size); letter-spacing: .04em; text-transform: uppercase; overflow-wrap: anywhere; }
 .countryCode {
   display: flex;
   align-items: center;
-  gap: var(--s4);
+  gap: var(--s2);
   font: var(--weight-bold) var(--countries-code-font-size)/1.2 var(--display);
   font-optical-sizing: none;
   font-variation-settings: "opsz" var(--display-optical-size);
 }
 .countryCode span { width: .6rem; height: .6rem; flex: 0 0 auto; border-radius: 50%; background: var(--red); }
-.countryName { margin: var(--s2) 0 0 calc(var(--s4) + .6rem); font-size: var(--countries-name-font-size); letter-spacing: .08em; text-transform: uppercase; overflow-wrap: anywhere; }
+.countryName { margin: var(--s2) 0 0 calc(var(--s2) + .6rem); font-size: var(--countries-name-font-size); letter-spacing: .08em; text-transform: uppercase; overflow-wrap: anywhere; }
 .capabilitiesGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--gap); }
 .capabilitiesIntro .display { font-size: clamp(3rem, 6.55vw, 6.5rem); white-space: nowrap; }
 .capabilityArt { margin-top: var(--s5); display: grid; grid-template-columns: .3fr 1fr; min-height: 340px; gap: var(--s5); }
@@ -380,9 +388,15 @@
   .countries {
     --countries-flag-width: 4.5rem;
     --countries-flag-height: 3rem;
+    --countries-group-flag-width: 4.5rem;
+    --countries-group-flag-height: 3rem;
+    --countries-region-flag-width: 3.5rem;
+    --countries-region-flag-height: 2.333rem;
     padding-block: var(--countries-section-padding);
   }
   .country { gap: var(--s3); }
+  .countryGroup { grid-template-columns: 1fr; gap: var(--s5); }
+  .countryRegions { grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr)); }
   .countryIdentity { padding-left: var(--s3); }
   .countryCode { gap: var(--s2); }
   .countryName { margin-left: calc(var(--s2) + .6rem); }
