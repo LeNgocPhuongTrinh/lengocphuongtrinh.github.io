@@ -15,7 +15,7 @@ test('color portraits, external destinations, and ordered experience', async ({ 
   for (const [index, company] of ['Shopee', 'Unilever', 'CoderSchool', 'CJ Foods', 'Avery Dennison', 'ITL'].entries()) expect(employers[index]).toContain(company);
   await page.locator('#coderschool-trigger').click();
   await expect(page.locator('#coderschool-panel')).toContainText('Vietnam');
-  await expect(page.locator('#about')).toContainText('Vietnam · UK');
+  await expect(page.locator('#about')).toContainText('VN · UK · +3 more');
   await expect(page.locator('#about')).toContainText('Still exploring');
 });
 

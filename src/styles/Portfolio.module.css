@@ -96,6 +96,50 @@
 .stat span { font-size: var(--text-xs); text-transform: uppercase; }
 .stat .meta { letter-spacing: .04em; }
 .statsGrid > .handwriting { margin-left: var(--s5); }
+.countries {
+  --countries-columns: var(--countries-columns-desktop);
+  padding-block: var(--countries-section-padding);
+}
+.countries .sectionLabel { margin-bottom: var(--s2); }
+.countriesTitle { font: inherit; letter-spacing: inherit; }
+.countriesGridFrame { overflow: hidden; }
+.countriesGrid {
+  display: grid;
+  /* The percentage caps columns; the minimum lets them collapse without count-specific rules. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, max(var(--countries-item-min-width), calc((100% - (var(--countries-columns) - 1) * var(--countries-column-gap)) / var(--countries-columns)))), 1fr));
+  gap: var(--countries-row-gap) var(--countries-column-gap);
+  list-style: none;
+  padding: 0;
+  margin: -1px 0 0 -1px;
+}
+.country {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: var(--s5);
+  padding: var(--countries-item-padding);
+  border-top: var(--border);
+  border-left: var(--border);
+}
+.countryFlag {
+  flex: 0 0 auto;
+  width: var(--countries-flag-width);
+  height: var(--countries-flag-height);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: var(--border);
+}
+.countryIdentity { min-width: 0; border-left: var(--border); padding-left: var(--s5); }
+.countryCode {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  font: var(--weight-bold) var(--countries-code-font-size)/1.2 var(--display);
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" var(--display-optical-size);
+}
+.countryCode span { width: .6rem; height: .6rem; flex: 0 0 auto; border-radius: 50%; background: var(--red); }
+.countryName { margin: var(--s2) 0 0 calc(var(--s4) + .6rem); font-size: var(--countries-name-font-size); letter-spacing: .08em; text-transform: uppercase; overflow-wrap: anywhere; }
 .capabilitiesGrid { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--gap); }
 .capabilitiesIntro .display { font-size: clamp(3rem, 6.55vw, 6.5rem); white-space: nowrap; }
 .capabilityArt { margin-top: var(--s5); display: grid; grid-template-columns: .3fr 1fr; min-height: 340px; gap: var(--s5); }
@@ -284,6 +328,7 @@
 .inlineGallery[open] summary span { transform: rotate(45deg); }
 /* Single responsive threshold source: tablet 1050px; mobile 700px; small phone 400px. */
 @media (max-width: 1050px) {
+  .countries { --countries-columns: 2; }
   .statsGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s6); }
   .experienceTitle { grid-template-columns: 1fr; }
   .exploringCampus img { max-height: 300px; }
@@ -332,6 +377,17 @@
   .contactNote { position: absolute; bottom: var(--s8); left: var(--s7); width: auto; margin: 0; }
 }
 @media (max-width: 700px) {
+  .countries {
+    --countries-flag-width: 4.5rem;
+    --countries-flag-height: 3rem;
+    padding-block: var(--countries-section-padding);
+  }
+  .country { gap: var(--s3); }
+  .countryIdentity { padding-left: var(--s3); }
+  .countryCode { gap: var(--s2); }
+  .countryName { margin-left: calc(var(--s2) + .6rem); }
+  .countries .sectionLabel { flex-wrap: wrap; }
+  .countries .labelAside { display: block; flex-basis: 100%; text-align: left; }
   .exploringCampus { margin-top: var(--s5); width: 85%; justify-self: end; }
   .experienceTitle { grid-template-columns: minmax(90px, .8fr) minmax(0, 1.2fr); }
   .experienceTitle > .companyIdentity { font-size: .75rem; }
